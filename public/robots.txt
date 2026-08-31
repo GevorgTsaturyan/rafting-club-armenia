@@ -1,0 +1,13 @@
+# Rafting Club Armenia — robots.txt
+# Allow full crawling of the site (CSS, JS, images and all indexable pages).
+
+User-agent: *
+Allow: /
+
+# Keep low-value duplicate paths out of the index. The privacy policy is
+# intentionally noindex (also set via meta robots on the page itself).
+Disallow: /*/privacy-policy
+Disallow: /*/gaghtniutyan-kaghakakanutyun
+Disallow: /*/politika-konfidencialnosti
+
+Sitemap: https://raftingclubarmenia.com/sitemap_index.xml

@@ -1,0 +1,3 @@
+# Cloudflare Pages / Netlify redirects.
+# Send the bare root to the default (English) locale with a server 302.
+/            /en/    302

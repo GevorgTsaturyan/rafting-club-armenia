@@ -1,0 +1,55 @@
+{
+  "nav": {
+    "home": "Home",
+    "rafting": "Rafting in Armenia",
+    "debed": "Debed River",
+    "tours": "Tours",
+    "prices": "Prices",
+    "about": "About",
+    "contact": "Contact"
+  },
+  "cta": {
+    "book": "Book now",
+    "contact": "Contact us"
+  },
+  "header": {
+    "brandLine1": "Rafting Club",
+    "brandLine2": "Armenia",
+    "language": "Language",
+    "openMenu": "Open menu",
+    "closeMenu": "Close menu",
+    "skip": "Skip to main content"
+  },
+  "footer": {
+    "tagline": "Guided whitewater rafting on the Debed River in Lori, Armenia. Safety-focused, unforgettable, and open to everyone.",
+    "explore": "Explore",
+    "company": "Company",
+    "contactHeading": "Contact",
+    "followHeading": "Follow us",
+    "languagesHeading": "Language",
+    "rights": "All rights reserved.",
+    "privacy": "Privacy Policy",
+    "pending": "Coming soon",
+    "socialPending": "Social channels coming soon.",
+    "disclaimer": "Some details are being finalised and will be published soon."
+  },
+  "common": {
+    "duration": "Duration",
+    "onRequest": "On request"
+  },
+  "breadcrumb": {
+    "home": "Home"
+  },
+  "gallery": {
+    "prev": "Previous image",
+    "next": "Next image",
+    "close": "Close gallery",
+    "open": "Open image"
+  },
+  "notFound": {
+    "title": "Page not found",
+    "text": "The page you’re looking for has drifted downstream. Let’s get you back on course.",
+    "home": "Back to home",
+    "tours": "View rafting tours"
+  }
+}
