@@ -559,47 +559,27 @@ const en: LocaleContent = {
 
   contact: {
     seo: {
-      title: 'Contact Rafting Club Armenia | Book Debed River Rafting',
+      title: 'Contact Rafting Club Armenia | Debed River Rafting',
       description:
-        'Contact Rafting Club Armenia to book a guided rafting trip on the Debed River. Send your dates and group size and we’ll confirm the details.'
+        'Get in touch with Rafting Club Armenia by phone, WhatsApp, Instagram or Facebook to plan and book your rafting adventure on the Debed River.'
     },
     hero: {
       eyebrow: 'Contact',
       title: 'Get in touch',
       subtitle:
-        'Ready to raft the Debed, or just have a question? Send us a message and we’ll get back to you.'
+        'Ready to raft the Debed, or just have a question? Reach us directly by phone, WhatsApp or social media.'
     },
     intro: [
-      'The quickest way to book is to send us your preferred dates and the number of people in your group using the form below. We’ll confirm availability, prices and everything else you need to know.'
+      'The easiest way to plan or book your rafting trip is to contact us directly. Call us, message us on WhatsApp, or reach out on Instagram or Facebook — we’re happy to help with dates, group sizes and any questions you have.'
     ],
-    details: {
-      phoneLabel: 'Phone',
-      emailLabel: 'Email',
-      whatsappLabel: 'WhatsApp',
-      addressLabel: 'Address',
-      regionLabel: 'Region',
-      pending: 'To be confirmed'
-    },
-    form: {
-      heading: 'Send us a message',
-      name: 'Your name',
-      email: 'Email',
-      phone: 'Phone (optional)',
-      people: 'Number of people',
-      date: 'Preferred date',
-      tour: 'Which tour?',
-      tourPlaceholder: 'Select a tour (optional)',
-      message: 'Message',
-      messagePlaceholder: 'Tell us about your group and what you have in mind…',
-      submit: 'Send message',
-      consent: 'I agree to be contacted about my enquiry.',
-      successTitle: 'Thank you!',
-      successText: 'Your message is ready to send. We’ll get back to you as soon as we can.',
-      errorText: 'Something went wrong. Please try again, or contact us directly.',
-      disabledNotice:
-        'Online sending isn’t connected yet. Your details are validated below — once our contact channel is confirmed this form will submit directly.',
-      required: 'This field is required',
-      invalidEmail: 'Please enter a valid email address'
+    channelsHeading: 'Contact us directly',
+    channelsNote: 'Tap any option below to reach us — we usually reply quickly.',
+    phoneLabel: 'Phone',
+    actions: {
+      call: 'Call us',
+      whatsapp: 'Chat on WhatsApp',
+      instagram: 'Follow us on Instagram',
+      facebook: 'Message us on Facebook'
     }
   },
 

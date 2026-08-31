@@ -25,8 +25,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl: SITE_URL, // override with NUXT_PUBLIC_SITE_URL
-      gaId: '', // override with NUXT_PUBLIC_GA_ID (empty = analytics off)
-      contactEndpoint: '' // override with NUXT_PUBLIC_CONTACT_ENDPOINT
+      gaId: '' // override with NUXT_PUBLIC_GA_ID (empty = analytics off)
     }
   },
 

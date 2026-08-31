@@ -56,7 +56,7 @@ const socials = computed(() =>
           <ul class="footer__contact">
             <li>
               <UiAppIcon name="phone" :size="18" />
-              <a v-if="contact.phone" :href="`tel:${contact.phone}`" class="footer__link">{{ contact.phone }}</a>
+              <a v-if="contact.phone" :href="`tel:${contact.phone.replace(/\s+/g, '')}`" class="footer__link">{{ contact.phone }}</a>
               <span v-else class="footer__muted">{{ t('footer.pending') }}</span>
             </li>
             <li>

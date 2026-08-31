@@ -64,17 +64,18 @@ export const siteConfig: SiteConfig = {
     lng: null
   },
   contact: {
-    phone: null, // PLACEHOLDER_PHONE — e.g. "+374 00 000000"
+    phone: '+374 33 080524',
     email: null, // PLACEHOLDER_EMAIL — e.g. "info@raftingclubarmenia.com"
-    whatsapp: null, // PLACEHOLDER_WHATSAPP
+    // Digits only, international format (used to build the wa.me link).
+    whatsapp: '37433080524',
     address: null, // PLACEHOLDER_ADDRESS
     region: 'Lori Province',
     country: 'Armenia',
     mapUrl: null // PLACEHOLDER_MAP_URL
   },
   social: {
-    instagram: null, // PLACEHOLDER_INSTAGRAM
-    facebook: null, // PLACEHOLDER_FACEBOOK
+    instagram: 'https://www.instagram.com/rafting.club.armenia/',
+    facebook: 'https://www.facebook.com/share/1EiH4QwiWG/',
     youtube: null, // PLACEHOLDER_YOUTUBE
     tripadvisor: null, // PLACEHOLDER_TRIPADVISOR
     telegram: null // PLACEHOLDER_TELEGRAM

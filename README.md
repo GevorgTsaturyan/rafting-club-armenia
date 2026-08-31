@@ -65,7 +65,6 @@ Copy `.env.example` → `.env`. All are optional; the site builds without them.
 | --- | --- |
 | `NUXT_PUBLIC_SITE_URL` | Canonical base URL (default `https://raftingclubarmenia.com`) |
 | `NUXT_PUBLIC_GA_ID` | Google Analytics 4 ID. Empty = analytics fully disabled |
-| `NUXT_PUBLIC_CONTACT_ENDPOINT` | Booking/contact form POST endpoint. Empty = form runs in offline/validate mode with a `mailto:` fallback |
 
 ## Project structure
 
@@ -94,8 +93,9 @@ Everything below is isolated so it can be filled in without touching component c
    and add `apple-touch-icon.png`, `icon-192.png`, `icon-512.png`, plus a
    `1200×630` `public/images/og/rafting-club-armenia-og.jpg`.
 5. **Analytics** — set `NUXT_PUBLIC_GA_ID` when you have a GA4 property.
-6. **Contact backend** — set `NUXT_PUBLIC_CONTACT_ENDPOINT` (e.g. a serverless
-   function, Formspree, Web3Forms) to enable direct form submission.
+6. **Instagram & Facebook URLs** — add the full profile/page URLs to
+   `config/site.ts` (`social.instagram`, `social.facebook`) so those contact
+   options appear. Phone and WhatsApp are already configured.
 
 ## Post-launch SEO checklist (outside the code)
 

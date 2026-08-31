@@ -227,34 +227,17 @@ export interface ContactPageContent {
     subtitle: string
   }
   intro: string[]
-  /** Labels for the contact details block (values come from siteConfig). */
-  details: {
-    phoneLabel: string
-    emailLabel: string
-    whatsappLabel: string
-    addressLabel: string
-    regionLabel: string
-    pending: string
-  }
-  form: {
-    heading: string
-    name: string
-    email: string
-    phone: string
-    people: string
-    date: string
-    tour: string
-    tourPlaceholder: string
-    message: string
-    messagePlaceholder: string
-    submit: string
-    consent: string
-    successTitle: string
-    successText: string
-    errorText: string
-    disabledNotice: string
-    required: string
-    invalidEmail: string
+  /** Heading + helper text for the direct-contact section. */
+  channelsHeading: string
+  channelsNote: string
+  /** Localized label for the phone channel (brand names stay literal). */
+  phoneLabel: string
+  /** Call-to-action caption for each channel (numbers/URLs come from siteConfig). */
+  actions: {
+    call: string
+    whatsapp: string
+    instagram: string
+    facebook: string
   }
 }
 
