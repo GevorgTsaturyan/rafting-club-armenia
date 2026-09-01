@@ -1,63 +1,50 @@
 <script setup lang="ts">
 /**
- * Brand lockup: an inline SVG mark (mountain + wave) plus the wordmark.
+ * Brand lockup: the Rafting Club water-drop mark + the wordmark.
  *
- * This is a clean placeholder identity. To use the real Rafting Club Armenia
- * logo, drop it at `public/images/logo/rafting-club-armenia-logo.svg` and set
- * `useImage` — the component will render the file instead of the inline mark.
+ * The mark is the real logo (light-blue drop with paddlers), kept as a
+ * transparent PNG so it reads on both the dark hero header and the light
+ * scrolled header. `variant` only recolours the wordmark text beside it.
  */
-withDefaults(
-  defineProps<{ variant?: 'dark' | 'light'; useImage?: boolean }>(),
-  { variant: 'dark', useImage: false }
-)
+withDefaults(defineProps<{ variant?: 'dark' | 'light' }>(), { variant: 'dark' })
 const { t } = useI18n()
 </script>
 
 <template>
   <span class="logo" :class="`logo--${variant}`">
     <img
-      v-if="useImage"
-      src="/images/logo/rafting-club-armenia-logo.svg"
-      alt="Rafting Club Armenia"
-      width="150"
-      height="40"
-      class="logo__img"
+      src="/images/logo/rafting-club-armenia-drop.png"
+      alt=""
+      width="37"
+      height="52"
+      class="logo__mark"
+      aria-hidden="true"
     />
-    <template v-else>
-      <svg class="logo__mark" viewBox="0 0 44 44" width="42" height="42" aria-hidden="true">
-        <defs>
-          <linearGradient id="rcaMark" x1="0" y1="0" x2="1" y2="1">
-            <stop offset="0" stop-color="#0e7c86" />
-            <stop offset="1" stop-color="#0d3b47" />
-          </linearGradient>
-        </defs>
-        <rect x="1" y="1" width="42" height="42" rx="12" fill="url(#rcaMark)" />
-        <path d="M9 26l6-11 4.5 8 3-4.5L30 26z" fill="none" stroke="#fff" stroke-width="2.2"
-          stroke-linejoin="round" stroke-linecap="round" />
-        <path d="M7 31c2.4 0 2.4 2 4.8 2s2.4-2 4.8-2 2.4 2 4.8 2 2.4-2 4.8-2 2.4 2 4.8 2"
-          fill="none" stroke="#ff6a3d" stroke-width="2.4" stroke-linecap="round" />
-      </svg>
-      <span class="logo__text">
-        <span class="logo__line1">{{ t('header.brandLine1') }}</span>
-        <span class="logo__line2">{{ t('header.brandLine2') }}</span>
-      </span>
-    </template>
+    <span class="logo__text">
+      <span class="logo__line1">{{ t('header.brandLine1') }}</span>
+      <span class="logo__line2">{{ t('header.brandLine2') }}</span>
+    </span>
   </span>
 </template>
 
 <style scoped>
-.logo { display: inline-flex; align-items: center; gap: 0.65rem; }
-.logo__img { height: 40px; width: auto; }
-.logo__mark { flex: none; border-radius: 12px; box-shadow: var(--shadow-sm); }
+.logo { display: inline-flex; align-items: center; gap: 0.6rem; }
+.logo__mark {
+  flex: none;
+  height: 52px;
+  width: auto;
+  /* Lift the mark slightly off dark/light backgrounds without a hard box edge. */
+  filter: drop-shadow(0 2px 4px rgba(10, 28, 34, 0.18));
+}
 .logo__text {
   display: flex;
   flex-direction: column;
-  line-height: 1;
+  line-height: 1.05;
   font-family: var(--font-display);
   font-weight: 800;
   letter-spacing: -0.02em;
 }
-.logo__line1 { font-size: 1.02rem; }
+.logo__line1 { font-size: 1.02rem; color: var(--ink); }
 .logo__line2 {
   font-size: 1.02rem;
   color: var(--accent);
