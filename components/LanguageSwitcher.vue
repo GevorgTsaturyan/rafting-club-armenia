@@ -6,7 +6,10 @@ import { ref } from 'vue'
  * user on the translated equivalent of the current page. Renders real <a>
  * links, so it works with static generation and is crawlable.
  */
-withDefaults(defineProps<{ variant?: 'light' | 'dark' }>(), { variant: 'light' })
+withDefaults(defineProps<{ variant?: 'light' | 'dark'; layout?: 'dropdown' | 'inline' }>(), {
+  variant: 'light',
+  layout: 'dropdown'
+})
 
 const { locale, locales, t } = useI18n()
 const switchLocalePath = useSwitchLocalePath()
@@ -26,7 +29,26 @@ onClickOutside(root, close)
 </script>
 
 <template>
-  <div ref="root" class="lang" :class="`lang--${variant}`">
+  <!--
+    Inline layout: a flat row of language links. Used inside the mobile menu,
+    where an absolutely-positioned dropdown would open off-screen. No toggle,
+    no popup — every language is always tappable.
+  -->
+  <div v-if="layout === 'inline'" class="lang lang--inline" :aria-label="t('header.language')" role="group">
+    <NuxtLink
+      v-for="l in (locales as any[])"
+      :key="l.code"
+      :to="switchLocalePath(l.code)"
+      class="lang__pill"
+      :class="{ 'is-active': l.code === locale }"
+      :hreflang="l.code"
+      :aria-current="l.code === locale ? 'true' : undefined"
+    >
+      {{ l.name }}
+    </NuxtLink>
+  </div>
+
+  <div v-else ref="root" class="lang" :class="`lang--${variant}`">
     <button
       type="button"
       class="lang__toggle"
@@ -105,4 +127,29 @@ onClickOutside(root, close)
 }
 .lang__item:hover { background: var(--mist); color: var(--ink); }
 .lang__item.is-active { color: var(--river); font-weight: 700; }
+
+/* Inline layout (mobile menu) --------------------------------------------- */
+.lang--inline {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.lang__pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.55rem 1rem;
+  border-radius: var(--radius-pill);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--ink);
+  box-shadow: inset 0 0 0 1.5px var(--line);
+  transition: box-shadow 0.2s var(--ease), background 0.2s var(--ease), color 0.2s var(--ease);
+}
+.lang__pill:hover { color: var(--ink); box-shadow: inset 0 0 0 1.5px var(--river-300); }
+.lang__pill.is-active {
+  color: #fff;
+  background: var(--river);
+  box-shadow: inset 0 0 0 1.5px var(--river);
+}
+.lang__pill.is-active:hover { color: #fff; background: var(--river-600); }
 </style>

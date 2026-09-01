@@ -31,7 +31,8 @@ const primaryTo = computed(() => localePath('contact'))
 </template>
 
 <style scoped>
-.cta { position: relative; }
+/* overflow:hidden clips the decorative glow so it can't cause horizontal scroll on mobile. */
+.cta { position: relative; overflow: hidden; }
 .cta__inner {
   position: relative;
   display: flex;

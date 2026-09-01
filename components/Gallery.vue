@@ -88,7 +88,9 @@ onBeforeUnmount(() => {
 <style scoped>
 .gallery__grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  /* minmax(0, 1fr): without the 0 floor, the tall cell's 1/1 aspect-ratio image
+     forces its column wider than the viewport → horizontal scroll on mobile. */
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-rows: 1fr;
   gap: clamp(0.6rem, 1.5vw, 1rem);
 }
@@ -162,7 +164,7 @@ onBeforeUnmount(() => {
 .fade-enter-from, .fade-leave-to { opacity: 0; }
 
 @media (max-width: 720px) {
-  .gallery__grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery__grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .lightbox__nav { position: absolute; bottom: 1.5rem; }
   .lightbox__nav--prev { left: 25%; }
   .lightbox__nav--next { right: 25%; }

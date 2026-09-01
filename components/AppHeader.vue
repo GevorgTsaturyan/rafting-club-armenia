@@ -100,7 +100,7 @@ onBeforeUnmount(() => {
         </nav>
         <div class="mobile__footer">
           <NuxtLink :to="bookPath" class="btn btn--lg btn--block">{{ t('cta.book') }}</NuxtLink>
-          <LanguageSwitcher variant="light" class="mobile__lang" />
+          <LanguageSwitcher layout="inline" class="mobile__lang" />
         </div>
       </div>
     </transition>
@@ -115,14 +115,27 @@ onBeforeUnmount(() => {
   height: var(--header-h);
   display: flex;
   align-items: center;
-  transition: background 0.3s var(--ease), box-shadow 0.3s var(--ease), backdrop-filter 0.3s var(--ease);
 }
-.header.is-scrolled,
-.header.is-menu {
+/*
+ * The glass bar lives on a pseudo-element rather than the header itself.
+ * `backdrop-filter` on the header would make it the containing block for its
+ * position:fixed mobile menu, collapsing that menu into the 76px header bar.
+ * Keeping the filter on ::before leaves the header a normal containing block
+ * so the fixed menu fills the viewport as intended.
+ */
+.header::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: 0;
   background: rgba(255, 255, 255, 0.92);
   backdrop-filter: saturate(140%) blur(12px);
   box-shadow: 0 1px 0 var(--line), var(--shadow-sm);
+  transition: opacity 0.3s var(--ease);
 }
+.header.is-scrolled::before,
+.header.is-menu::before { opacity: 1; }
 .header__inner {
   display: flex;
   align-items: center;
