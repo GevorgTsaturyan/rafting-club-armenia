@@ -25,7 +25,7 @@ export default defineNuxtConfig({
   runtimeConfig: {
     public: {
       siteUrl: SITE_URL, // override with NUXT_PUBLIC_SITE_URL
-      gaId: '' // override with NUXT_PUBLIC_GA_ID (empty = analytics off)
+      gaId: 'G-6EKKR2W827' // GA4 measurement ID (still overridable via NUXT_PUBLIC_GA_ID)
     }
   },
 
