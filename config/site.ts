@@ -81,7 +81,9 @@ export const siteConfig: SiteConfig = {
     telegram: null // PLACEHOLDER_TELEGRAM
   },
   analytics: {
-    googleAnalyticsId: null // Set via NUXT_PUBLIC_GA_ID or here once available.
+    // Informational only. GA4 is loaded by plugins/analytics.client.ts, which
+    // reads runtimeConfig.public.gaId (set via the NUXT_PUBLIC_GA_ID env var).
+    googleAnalyticsId: null
   },
   ogImage: '/images/og/rafting-club-armenia-og.jpg'
 }
