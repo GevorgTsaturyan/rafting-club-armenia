@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { usePageMeta } from '~/composables/usePageMeta'
-import { sportsActivityLd } from '~/composables/useStructuredData'
+import { sportsActivityLd, touristAttractionLd } from '~/composables/useStructuredData'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -20,7 +20,7 @@ usePageMeta({
   seo: home.value.seo,
   type: 'website',
   faq: home.value.faq.items,
-  extraLd: [sportsActivityLd(home.value.seo.description)]
+  extraLd: [sportsActivityLd(home.value.seo.description), touristAttractionLd()]
 })
 </script>
 

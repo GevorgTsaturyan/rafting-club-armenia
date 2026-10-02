@@ -58,10 +58,9 @@ export const siteConfig: SiteConfig = {
   url: SITE_URL,
   brand: 'Rafting Club Armenia',
   geo: {
-    // Approximate Debed River / Lori region. Replace with the exact meeting
-    // point coordinates before enabling map-based structured data.
-    lat: null,
-    lng: null
+    // Exact meeting point in Tumanyan, Lori Province (from Google Maps pin).
+    lat: 40.996237,
+    lng: 44.653927
   },
   contact: {
     phone: '+374 33 080524',

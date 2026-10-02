@@ -30,18 +30,37 @@ function sameAs(): string[] {
 }
 
 export function organizationLd() {
+  const { lat, lng } = siteConfig.geo
   return clean({
-    '@type': 'Organization',
+    '@type': ['Organization', 'LocalBusiness'],
     '@id': `${siteConfig.url}/#organization`,
     name: siteConfig.brand,
+    alternateName: ['Rafting Armenia', 'Armenia Rafting Club', 'Debed River Rafting Armenia'],
     url: siteConfig.url,
-    logo: `${siteConfig.url}/images/logo/rafting-club-armenia-logo.svg`,
+    logo: {
+      '@type': 'ImageObject',
+      url: `${siteConfig.url}/images/logo/rafting-club-armenia-logo.svg`
+    },
     image: `${siteConfig.url}${siteConfig.ogImage}`,
     description:
-      'Guided whitewater rafting on the Debed River in Lori, Armenia.',
-    areaServed: { '@type': 'Country', name: 'Armenia' },
+      'Guided whitewater rafting on the Debed River in Lori, Armenia. Adventures for beginners, families, groups and active travellers.',
+    areaServed: [
+      { '@type': 'Country', name: 'Armenia' },
+      { '@type': 'AdministrativeArea', name: 'Lori Province, Armenia' }
+    ],
     email: siteConfig.contact.email,
     telephone: siteConfig.contact.phone,
+    hasMap: siteConfig.contact.mapUrl,
+    geo: lat != null && lng != null
+      ? { '@type': 'GeoCoordinates', latitude: lat, longitude: lng }
+      : undefined,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: siteConfig.contact.address,
+      addressRegion: siteConfig.contact.region,
+      addressCountry: 'AM'
+    },
+    knowsAbout: ['Whitewater rafting', 'River sports', 'Outdoor adventure', 'Rafting Armenia', 'Active leisure Armenia'],
     sameAs: sameAs()
   })
 }
@@ -124,6 +143,38 @@ export function faqLd(items: FaqItem[]) {
       name: i.question,
       acceptedAnswer: { '@type': 'Answer', text: i.answer }
     }))
+  })
+}
+
+/** TouristAttraction for the Debed River rafting experience — helps travel and activity searches. */
+export function touristAttractionLd() {
+  const { lat, lng } = siteConfig.geo
+  return clean({
+    '@type': 'TouristAttraction',
+    '@id': `${siteConfig.url}/#attraction`,
+    name: 'Debed River Rafting, Armenia',
+    description:
+      'Whitewater rafting through the Debed River canyon in Lori Province, Armenia. Expert-guided tours for beginners, families and groups through dramatic gorge scenery with UNESCO-listed monasteries on the banks.',
+    url: siteConfig.url,
+    image: `${siteConfig.url}/images/rafting/debed-river-canyon-lori-armenia.jpg`,
+    touristType: ['Adventure traveler', 'Nature enthusiast', 'Active tourist', 'Family traveler', 'Sports enthusiast'],
+    geo: lat != null && lng != null
+      ? { '@type': 'GeoCoordinates', latitude: lat, longitude: lng }
+      : undefined,
+    address: {
+      '@type': 'PostalAddress',
+      addressRegion: 'Lori Province',
+      addressCountry: 'AM'
+    },
+    availableLanguage: [
+      { '@type': 'Language', name: 'English' },
+      { '@type': 'Language', name: 'Armenian' },
+      { '@type': 'Language', name: 'Russian' }
+    ],
+    isAccessibleForFree: false,
+    publicAccess: true,
+    containedInPlace: { '@type': 'Country', name: 'Armenia' },
+    provider: { '@id': `${siteConfig.url}/#organization` }
   })
 }
 

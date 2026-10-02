@@ -76,15 +76,15 @@ const en: LocaleContent = {
 
   home: {
     seo: {
-      title: 'Rafting in Armenia | Rafting Club Armenia — Debed River',
+      title: 'Rafting Armenia — Whitewater Tours on the Debed River | Rafting Club Armenia',
       description:
-        'Rafting Club Armenia runs guided whitewater rafting trips on the Debed River in Lori. Safety-focused guides, stunning canyon scenery and an unforgettable adventure. Book yours.'
+        'Book guided whitewater rafting in Armenia on the Debed River, Lori Province. Safety-focused adventures for beginners, families and groups. The best rafting Armenia has to offer — book your trip today.'
     },
     hero: {
       eyebrow: 'Rafting Club Armenia',
       title: 'Rafting in Armenia',
       subtitle:
-        'Experience an unforgettable whitewater adventure on the Debed River, in the heart of Armenia’s Lori highlands — guided, safe and genuinely thrilling.',
+        'Experience unforgettable whitewater rafting in Armenia on the Debed River — guided, safe and genuinely thrilling. The best active leisure Armenia has to offer.',
       primaryCta: 'Book your adventure',
       secondaryCta: 'Explore the tours',
       scrollHint: 'Scroll to explore'
@@ -135,7 +135,7 @@ const en: LocaleContent = {
         eyebrow: 'Why Armenia',
         title: 'Why go rafting in Armenia',
         intro:
-          'Armenia is a compact country of deep river canyons, high mountains and ancient culture. Rafting here means adventure and landscape in equal measure.'
+          'Armenia is a compact country of deep river canyons, high mountains and ancient culture. For active leisure and adventure travel, rafting in Armenia means adrenaline and landscape in equal measure.'
       },
       features: [
         {
@@ -258,6 +258,21 @@ const en: LocaleContent = {
           question: 'How do I book a trip?',
           answer:
             'Use the contact form on this site with your preferred dates and the number of people. We’ll confirm availability and walk you through the rest.'
+        },
+        {
+          question: 'Can I go rafting in Armenia as a day trip from Yerevan?',
+          answer:
+            'Yes. The Debed River in the Lori Province is a few hours from Yerevan by road, which makes it a very practical day trip from the capital. Many visitors combine rafting Armenia with sightseeing in the Lori region on the same day.'
+        },
+        {
+          question: 'What outdoor and active leisure activities are available in Armenia?',
+          answer:
+            'Armenia has a growing range of outdoor activities for active travellers — hiking, trekking, mountain biking and whitewater rafting. Rafting on the Debed River is the standout active leisure activity in the Lori region, combining sport with some of the most dramatic natural scenery in the country.'
+        },
+        {
+          question: 'Is rafting in Armenia good for adventure tourism?',
+          answer:
+            'Absolutely. Rafting on the Debed River is one of the best adventure tourism experiences Armenia offers. The canyon scenery, UNESCO-listed monasteries nearby and the quality of the whitewater make it a highlight of any active Armenia itinerary.'
         }
       ]
     },
@@ -271,9 +286,9 @@ const en: LocaleContent = {
 
   raftingInArmenia: {
     seo: {
-      title: 'Rafting in Armenia — Guided Whitewater Adventures | Rafting Club',
+      title: 'Rafting in Armenia — Complete Guide to Whitewater Adventures | Rafting Club Armenia',
       description:
-        'A complete guide to rafting in Armenia: where to go, what to expect on the Debed River, the best season, safety and how to book a guided whitewater trip.'
+        'Your complete guide to rafting in Armenia: the Debed River canyon, best season, safety tips and how to book a guided whitewater tour. Armenia\'s top-rated rafting experience awaits.'
     },
     hero: {
       eyebrow: 'Rafting in Armenia',
@@ -323,6 +338,19 @@ const en: LocaleContent = {
           'Rafting is an adventure sport, and we treat safety seriously. Everyone wears a life vest and helmet, listens to a full briefing and follows the guide’s instructions on the river. You do not need to be a strong swimmer, but you should always let your guide know about any concerns.',
           'Wear clothes you don’t mind getting wet and footwear that stays securely on your feet in water. Bring a change of dry clothes and a towel for afterwards — we provide all the rafting equipment.'
         ]
+      },
+      {
+        heading: 'Rafting as active leisure in Armenia',
+        paragraphs: [
+          'Armenia is fast growing as an active leisure destination. Beyond its monasteries and mountain views, the country offers genuinely exciting outdoor experiences — and rafting on the Debed sits at the top of the list for active travellers.',
+          'As an outdoor activity, rafting in Armenia combines physical excitement with spectacular natural scenery. The Debed canyon is one of the most dramatic landscapes in the Caucasus, and experiencing it from a raft puts you right inside it. It is an ideal centrepiece for any Armenia adventure travel itinerary, and easy to combine with the historic monasteries and villages of the Lori region.'
+        ],
+        bullets: [
+          'One of the top adventure activities in Armenia for active travellers',
+          'Combines outdoor sport with Armenia\’s unique landscape and cultural heritage',
+          'Suitable for all fitness levels — no previous experience required',
+          'Easily added to any wider Armenia travel itinerary'
+        ]
       }
     ],
     faq: {
@@ -331,12 +359,22 @@ const en: LocaleContent = {
         {
           question: 'Where can you go rafting in Armenia?',
           answer:
-            'The most popular rafting is on the Debed River in the Lori Province of northern Armenia, which is where our guided trips run.'
+            'The most popular rafting in Armenia is on the Debed River in the Lori Province of northern Armenia. The Debed canyon is the country\'s premier rafting destination, where our guided trips run.'
         },
         {
           question: 'Is rafting in Armenia suitable for beginners?',
           answer:
-            'Yes. The Debed has sections that work well for first-timers, and every trip is fully guided with a safety briefing beforehand, so no experience is needed.'
+            'Yes. Rafting in Armenia on the Debed River is beginner-friendly — every trip is fully guided with a safety briefing beforehand, so no experience is needed.'
+        },
+        {
+          question: 'How far is the rafting from Yerevan?',
+          answer:
+            'The Debed River rafting area in Lori Province is approximately 2–3 hours from Yerevan by road, making it a popular day trip from the capital. Many visitors combine rafting Armenia with the monasteries and scenery of the Lori region.'
+        },
+        {
+          question: 'What adventure activities are available in Armenia?',
+          answer:
+            'Armenia offers hiking, trekking, mountain biking and whitewater rafting for active travellers. Rafting on the Debed River is the most accessible and spectacular outdoor activity — it sits at the heart of adventure tourism in Armenia.'
         },
         {
           question: 'When is rafting season in Armenia?',
@@ -356,9 +394,9 @@ const en: LocaleContent = {
 
   debedRiver: {
     seo: {
-      title: 'Debed River Rafting in Lori, Armenia | Rafting Club Armenia',
+      title: 'Debed River Rafting Armenia — Canyon Whitewater in Lori | Rafting Club Armenia',
       description:
-        'Rafting on the Debed River in Lori, Armenia — the canyon, the rapids, the scenery and what a guided descent is really like. Plan your Debed rafting trip.'
+        'Raft the Debed River in Lori, Armenia — the country\'s best whitewater canyon. Expert-guided trips through dramatic gorge scenery with monasteries on the banks. Plan your Debed rafting trip today.'
     },
     hero: {
       eyebrow: 'Debed River',
@@ -401,6 +439,13 @@ const en: LocaleContent = {
           'The Debed runs through the Lori region, an easy trip from central Armenia, which makes it simple to add rafting to a wider tour of the country. River conditions change with the season, so the best time to raft varies from year to year.',
           'Tell us your dates and group size and we’ll confirm whether the river is running well and recommend the right trip for you.'
         ]
+      },
+      {
+        heading: 'The Debed River — the home of rafting in Armenia',
+        paragraphs: [
+          'The Debed River is the reason why rafting in Armenia has become one of the country\’s most exciting outdoor activities. No other river in Armenia combines accessible whitewater, dramatic canyon scenery and cultural heritage in the same way.',
+          'For active travellers, adventure tourists and anyone looking for something beyond the standard sightseeing itinerary, a day on the Debed is the defining outdoor experience Armenia has to offer. Rafting here is not just a sport — it is a way of seeing one of the most beautiful parts of the Caucasus from the inside.'
+        ]
       }
     ],
     cta: {
@@ -413,9 +458,9 @@ const en: LocaleContent = {
 
   toursPage: {
     seo: {
-      title: 'Rafting Tours in Armenia | Debed River Trips — Rafting Club',
+      title: 'Armenia Rafting Tours — Debed River Whitewater Packages | Rafting Club Armenia',
       description:
-        'Guided rafting tours in Armenia on the Debed River — from beginner-friendly runs to longer adventures and group days. See the trips and plan your booking.'
+        'Choose your Armenia rafting tour on the Debed River: classic run, adventure descent or group day. All tours fully guided, all gear included. Book Armenia\'s best outdoor activity today.'
     },
     hero: {
       eyebrow: 'Rafting tours',
@@ -489,9 +534,9 @@ const en: LocaleContent = {
 
   about: {
     seo: {
-      title: 'About Rafting Club Armenia | Guided Rafting on the Debed River',
+      title: 'About Rafting Club Armenia — Your Guides to Rafting in Armenia',
       description:
-        'Rafting Club Armenia runs guided whitewater rafting on the Debed River in Lori, with a focus on safety, small teams and genuine adventure. Learn more about us.'
+        'Rafting Club Armenia runs guided whitewater rafting on the Debed River in Lori. Safety-first, small teams and genuine Armenian adventure. Meet the team behind the best rafting in Armenia.'
     },
     hero: {
       eyebrow: 'About us',
@@ -559,9 +604,9 @@ const en: LocaleContent = {
 
   contact: {
     seo: {
-      title: 'Contact Rafting Club Armenia | Debed River Rafting',
+      title: 'Contact Rafting Club Armenia | Book Rafting in Armenia',
       description:
-        'Get in touch with Rafting Club Armenia by phone, WhatsApp, Instagram or Facebook to plan and book your rafting adventure on the Debed River.'
+        'Plan your rafting trip in Armenia. Contact Rafting Club Armenia by phone, WhatsApp, Instagram or Facebook. We\'ll help you book the best rafting Armenia can offer on the Debed River.'
     },
     hero: {
       eyebrow: 'Contact',

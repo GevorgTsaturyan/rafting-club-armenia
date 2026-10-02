@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue'
 import { usePageMeta } from '~/composables/usePageMeta'
+import { touristAttractionLd } from '~/composables/useStructuredData'
 
 const { t } = useI18n()
 const localePath = useLocalePath()
@@ -11,7 +12,8 @@ const { crumbs } = usePageMeta({
   seo: page.value.seo,
   type: 'article',
   crumbs: [{ label: t('nav.rafting') }],
-  faq: page.value.faq?.items
+  faq: page.value.faq?.items,
+  extraLd: [touristAttractionLd()]
 })
 </script>
 

@@ -36,7 +36,12 @@ export default defineNuxtConfig({
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
         { name: 'theme-color', content: '#0d3b47' },
-        { name: 'format-detection', content: 'telephone=no' }
+        { name: 'format-detection', content: 'telephone=no' },
+        // Geo signals for local and regional search engines (Bing, Yandex)
+        { name: 'geo.region', content: 'AM-LO' },
+        { name: 'geo.placename', content: 'Lori Province, Armenia' },
+        { name: 'geo.position', content: '40.996237;44.653927' },
+        { name: 'ICBM', content: '40.996237, 44.653927' }
       ],
       link: [
         { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
